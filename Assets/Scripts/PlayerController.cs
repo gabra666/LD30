@@ -57,6 +57,12 @@ public class PlayerController : MonoBehaviour {
 		if (collision.gameObject.layer == LayerMask.NameToLayer ("Poo")) {
 			audioSource.clip = sounds[0];
 			audioSource.Play();
+			Invoke ("RestartLevel",2);
 		}
+	}
+
+	
+	private void RestartLevel(){
+		Application.LoadLevel(Application.loadedLevel);
 	}
 }
