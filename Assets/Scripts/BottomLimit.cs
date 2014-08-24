@@ -8,5 +8,9 @@ public class BottomLimit : MonoBehaviour {
 		if (collider.gameObject.layer == LayerMask.NameToLayer ("Player")) {
 			Application.LoadLevel(0);
 		}
+
+		if(collider.gameObject.layer == LayerMask.NameToLayer ("FallingPlatform")){
+			GameObject.Destroy(collider.gameObject);
+		}
 	}
 }
