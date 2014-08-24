@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision){
-		if (collision.gameObject.layer == LayerMask.NameToLayer ("Poo")) {
+		if (collision.gameObject.layer == LayerMask.NameToLayer ("Poo") || collision.gameObject.layer == LayerMask.NameToLayer ("Enemy")) {
 			audioSource.clip = sounds[0];
 			audioSource.Play();
 			Invoke ("RestartLevel",2);
