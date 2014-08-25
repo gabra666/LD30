@@ -41,6 +41,11 @@ public class GameController : Singleton<GameController> {
 				/*blueLayer.SetActive(true);*/
 				GameObject.Instantiate(blueLayer);
 			}
+
+			if(blueCleared && redCleared && greenCleared){
+				GameObject credits = GameObject.Find("Credits");
+				credits.GetComponent<Animator>().SetBool("Show",true);
+			}
 		}
 	}
 
